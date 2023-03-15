@@ -18,6 +18,11 @@
 		68E2AF4529C1F39300403541 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF4429C1F39300403541 /* ChatVC.swift */; };
 		68E2AF4729C1F3A400403541 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF4629C1F3A400403541 /* ProfileVC.swift */; };
 		68E2AF4929C1F40100403541 /* ESTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF4829C1F40100403541 /* ESTabBarController.swift */; };
+		68E2AF4C29C2132200403541 /* CategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF4B29C2132200403541 /* CategoryCollectionView.swift */; };
+		68E2AF4E29C213BC00403541 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF4D29C213BC00403541 /* CategoryCell.swift */; };
+		68E2AF5329C214CB00403541 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF5229C214CB00403541 /* UIView+Ext.swift */; };
+		68E2AF5629C21B0E00403541 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF5529C21B0E00403541 /* Categories.swift */; };
+		68E2AF5A29C24C5E00403541 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68E2AF5929C24C5E00403541 /* Montserrat-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		68E2AF4429C1F39300403541 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		68E2AF4629C1F3A400403541 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		68E2AF4829C1F40100403541 /* ESTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESTabBarController.swift; sourceTree = "<group>"; };
+		68E2AF4B29C2132200403541 /* CategoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionView.swift; sourceTree = "<group>"; };
+		68E2AF4D29C213BC00403541 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		68E2AF5229C214CB00403541 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		68E2AF5529C21B0E00403541 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		68E2AF5929C24C5E00403541 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,10 @@
 		68E2AF2829C1E90700403541 /* EShop */ = {
 			isa = PBXGroup;
 			children = (
+				68E2AF5729C24C3100403541 /* Helpers */,
+				68E2AF5429C21ADE00403541 /* Models */,
+				68E2AF4F29C214A100403541 /* Extensions */,
+				68E2AF4A29C2113300403541 /* VIews */,
 				68E2AF3D29C1ED4E00403541 /* Controllers */,
 				68E2AF2929C1E90700403541 /* AppDelegate.swift */,
 				68E2AF2B29C1E90700403541 /* SceneDelegate.swift */,
@@ -88,6 +102,47 @@
 				68E2AF4829C1F40100403541 /* ESTabBarController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		68E2AF4A29C2113300403541 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				68E2AF4B29C2132200403541 /* CategoryCollectionView.swift */,
+				68E2AF4D29C213BC00403541 /* CategoryCell.swift */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		68E2AF4F29C214A100403541 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				68E2AF5229C214CB00403541 /* UIView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		68E2AF5429C21ADE00403541 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				68E2AF5529C21B0E00403541 /* Categories.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		68E2AF5729C24C3100403541 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				68E2AF5829C24C3B00403541 /* Fonts */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		68E2AF5829C24C3B00403541 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				68E2AF5929C24C5E00403541 /* Montserrat-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68E2AF3629C1E90800403541 /* LaunchScreen.storyboard in Resources */,
+				68E2AF5A29C24C5E00403541 /* Montserrat-VariableFont_wght.ttf in Resources */,
 				68E2AF3329C1E90800403541 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E2AF4C29C2132200403541 /* CategoryCollectionView.swift in Sources */,
 				68E2AF4129C1EF1500403541 /* FavoritesVC.swift in Sources */,
 				68E2AF4929C1F40100403541 /* ESTabBarController.swift in Sources */,
 				68E2AF4529C1F39300403541 /* ChatVC.swift in Sources */,
@@ -167,8 +224,11 @@
 				68E2AF4329C1F38300403541 /* CartVC.swift in Sources */,
 				68E2AF4729C1F3A400403541 /* ProfileVC.swift in Sources */,
 				68E2AF3F29C1ED9100403541 /* HomeVC.swift in Sources */,
+				68E2AF5329C214CB00403541 /* UIView+Ext.swift in Sources */,
 				68E2AF2A29C1E90700403541 /* AppDelegate.swift in Sources */,
 				68E2AF2C29C1E90700403541 /* SceneDelegate.swift in Sources */,
+				68E2AF4E29C213BC00403541 /* CategoryCell.swift in Sources */,
+				68E2AF5629C21B0E00403541 /* Categories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
