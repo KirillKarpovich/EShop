@@ -10,6 +10,8 @@ import UIKit
 class HomeVC: UIViewController {
     
     private let categoryCollectionView = CategoryCollectionView(frame: .zero)
+    private let latestProductCollectionVC = LatestCollectionVC(collectionViewLayout: UICollectionViewFlowLayout())
+    
     let categories: [Category] = [
         Category(icon: UIImage(named: "Phones"), title: "Phones"),
         Category(icon: UIImage(named: "Headphones"), title: "Headphones"),
@@ -47,10 +49,13 @@ class HomeVC: UIViewController {
     }
     
     private func configureCategoryCollectionView() {
-        view.addSubview(categoryCollectionView)
+        view.addSubviews(categoryCollectionView, latestProductCollectionVC.view)
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
+                
+        latestProductCollectionVC.view.anchor(top: categoryCollectionView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+        latestProductCollectionVC.view.constrainHeight(constant: 240)
         
         NSLayoutConstraint.activate([
             categoryCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
@@ -69,7 +74,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         guard let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifier, for: indexPath) as? CategoryCell
         else { return UICollectionViewCell() }
         
-        categoryCell.configureWith(with: categories[indexPath.item])
+        categoryCell.set(with: categories[indexPath.item])
         
         return categoryCell
     }

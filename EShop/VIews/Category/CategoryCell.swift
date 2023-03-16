@@ -23,7 +23,7 @@ class CategoryCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureWith(with category: Category) {
+    func set(with category: Category) {
         imageView.image = category.icon
         label.text = category.title
     }
@@ -33,11 +33,9 @@ class CategoryCell: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont(name: "Montserrat", size: 8)
-//        label.font = .systemFont(ofSize: 8)
         label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .center
         imageView.contentMode = .scaleAspectFit
-//        backgroundColor = .systemPink
         
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
