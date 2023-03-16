@@ -34,6 +34,14 @@
 		68E2AF6D29C3413A00403541 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68E2AF6C29C3413A00403541 /* Montserrat-SemiBold.ttf */; };
 		68E2AF6F29C3424400403541 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF6E29C3424400403541 /* AuthButton.swift */; };
 		68E2AF7229C353C000403541 /* EColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF7129C353C000403541 /* EColors.swift */; };
+		68E2AF7529C356BD00403541 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF7429C356BD00403541 /* Coordinator.swift */; };
+		68E2AF7729C3596400403541 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF7629C3596400403541 /* AppCoordinator.swift */; };
+		68E2AF7A29C359CC00403541 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF7929C359CC00403541 /* SignInCoordinator.swift */; };
+		68E2AF7C29C35DDC00403541 /* ESTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF7B29C35DDC00403541 /* ESTabBarCoordinator.swift */; };
+		68E2AF7E29C362CD00403541 /* DummyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF7D29C362CD00403541 /* DummyCoordinator.swift */; };
+		68E2AF8029C362F000403541 /* DummyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF7F29C362F000403541 /* DummyVC.swift */; };
+		68E2AF8229C3640000403541 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF8129C3640000403541 /* HomeCoordinator.swift */; };
+		68E2AF8429C367BA00403541 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF8329C367BA00403541 /* ProfileCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +74,14 @@
 		68E2AF6C29C3413A00403541 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		68E2AF6E29C3424400403541 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		68E2AF7129C353C000403541 /* EColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EColors.swift; sourceTree = "<group>"; };
+		68E2AF7429C356BD00403541 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		68E2AF7629C3596400403541 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		68E2AF7929C359CC00403541 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		68E2AF7B29C35DDC00403541 /* ESTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESTabBarCoordinator.swift; sourceTree = "<group>"; };
+		68E2AF7D29C362CD00403541 /* DummyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCoordinator.swift; sourceTree = "<group>"; };
+		68E2AF7F29C362F000403541 /* DummyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyVC.swift; sourceTree = "<group>"; };
+		68E2AF8129C3640000403541 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		68E2AF8329C367BA00403541 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +120,10 @@
 				68E2AF4F29C214A100403541 /* Extensions */,
 				68E2AF4A29C2113300403541 /* VIews */,
 				68E2AF3D29C1ED4E00403541 /* Controllers */,
+				68E2AF7829C359AD00403541 /* Coordinators */,
 				68E2AF2929C1E90700403541 /* AppDelegate.swift */,
 				68E2AF2B29C1E90700403541 /* SceneDelegate.swift */,
+				68E2AF7629C3596400403541 /* AppCoordinator.swift */,
 				68E2AF2D29C1E90700403541 /* ViewController.swift */,
 				68E2AF3229C1E90800403541 /* Assets.xcassets */,
 				68E2AF3429C1E90800403541 /* LaunchScreen.storyboard */,
@@ -124,6 +142,7 @@
 				68E2AF4629C1F3A400403541 /* ProfileVC.swift */,
 				68E2AF4829C1F40100403541 /* ESTabBarController.swift */,
 				68E2AF6229C321B600403541 /* SignInPageVC.swift */,
+				68E2AF7F29C362F000403541 /* DummyVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,8 +217,21 @@
 		68E2AF7329C3562000403541 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				68E2AF7429C356BD00403541 /* Coordinator.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		68E2AF7829C359AD00403541 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				68E2AF7929C359CC00403541 /* SignInCoordinator.swift */,
+				68E2AF7B29C35DDC00403541 /* ESTabBarCoordinator.swift */,
+				68E2AF7D29C362CD00403541 /* DummyCoordinator.swift */,
+				68E2AF8129C3640000403541 /* HomeCoordinator.swift */,
+				68E2AF8329C367BA00403541 /* ProfileCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,27 +307,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E2AF7E29C362CD00403541 /* DummyCoordinator.swift in Sources */,
 				68E2AF6529C326A000403541 /* String+Ext.swift in Sources */,
 				68E2AF6F29C3424400403541 /* AuthButton.swift in Sources */,
 				68E2AF4C29C2132200403541 /* CategoryCollectionView.swift in Sources */,
+				68E2AF8229C3640000403541 /* HomeCoordinator.swift in Sources */,
 				68E2AF4129C1EF1500403541 /* FavoritesVC.swift in Sources */,
+				68E2AF7A29C359CC00403541 /* SignInCoordinator.swift in Sources */,
 				68E2AF4929C1F40100403541 /* ESTabBarController.swift in Sources */,
 				68E2AF5F29C2F79F00403541 /* LatestProducts.swift in Sources */,
 				68E2AF4529C1F39300403541 /* ChatVC.swift in Sources */,
+				68E2AF8029C362F000403541 /* DummyVC.swift in Sources */,
+				68E2AF7C29C35DDC00403541 /* ESTabBarCoordinator.swift in Sources */,
 				68E2AF6129C2F86100403541 /* LatestCollectionVC.swift in Sources */,
 				68E2AF2E29C1E90700403541 /* ViewController.swift in Sources */,
 				68E2AF5D29C2F00A00403541 /* ProductCell.swift in Sources */,
 				68E2AF4329C1F38300403541 /* CartVC.swift in Sources */,
 				68E2AF4729C1F3A400403541 /* ProfileVC.swift in Sources */,
+				68E2AF7729C3596400403541 /* AppCoordinator.swift in Sources */,
 				68E2AF3F29C1ED9100403541 /* HomeVC.swift in Sources */,
 				68E2AF6329C321B600403541 /* SignInPageVC.swift in Sources */,
 				68E2AF5329C214CB00403541 /* UIView+Layout.swift in Sources */,
 				68E2AF7229C353C000403541 /* EColors.swift in Sources */,
 				68E2AF2A29C1E90700403541 /* AppDelegate.swift in Sources */,
+				68E2AF7529C356BD00403541 /* Coordinator.swift in Sources */,
 				68E2AF2C29C1E90700403541 /* SceneDelegate.swift in Sources */,
 				68E2AF4E29C213BC00403541 /* CategoryCell.swift in Sources */,
 				68E2AF5629C21B0E00403541 /* Categories.swift in Sources */,
 				68E2AF6729C32F1F00403541 /* LoginTextField.swift in Sources */,
+				68E2AF8429C367BA00403541 /* ProfileCoordinator.swift in Sources */,
 				68E2AF6929C33B1200403541 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

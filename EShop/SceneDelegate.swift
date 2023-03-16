@@ -18,9 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = SignInVC()
-        window?.makeKeyAndVisible()
         
+        let appCoordinator = AppCoordinator(window: window ?? UIWindow())
+        appCoordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

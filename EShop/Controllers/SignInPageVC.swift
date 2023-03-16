@@ -20,6 +20,17 @@ class SignInVC: UIViewController {
     let questionLabel = UILabel()
     let loginButton = UIButton()
     
+    private let coordinator: SignInFlow
+    
+    init(coordinator: SignInFlow) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -87,9 +98,7 @@ class SignInVC: UIViewController {
             showAlert(withTitle: "Invalid password", message: "Password must be at least 6 characters long.")
             return
         }
-        let nextVC = ESTabBarController()
-        navigationController?.pushViewController(nextVC, animated: true)
-        print("pushed")
+        coordinator.coordinateToTabBar()
     }
     
     private func showAlert(withTitle title: String, message: String) {
