@@ -34,7 +34,7 @@ class CategoryCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
         layout.estimatedItemSize = CGSize(width: 50, height: 100)
         layout.scrollDirection = .horizontal
         
-        self.contentInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+        self.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 12)
 
 //
 //        let paddingWidth = sectionInsets.left * (itemsForRow + 1)

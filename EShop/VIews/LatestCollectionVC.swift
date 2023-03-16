@@ -30,14 +30,13 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
         view.backgroundColor = .green
         layout.collectionView?.backgroundColor = .green
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
-
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        collectionView.showsHorizontalScrollIndicator = false
     }
    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 175, height: 220)
     }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5

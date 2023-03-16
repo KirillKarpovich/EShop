@@ -54,7 +54,7 @@ class HomeVC: UIViewController {
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
                 
-        latestProductCollectionVC.view.anchor(top: categoryCollectionView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+        latestProductCollectionVC.view.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 30, right: 0))
         latestProductCollectionVC.view.constrainHeight(constant: 240)
         
         NSLayoutConstraint.activate([

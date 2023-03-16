@@ -26,6 +26,14 @@
 		68E2AF5D29C2F00A00403541 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF5C29C2F00A00403541 /* ProductCell.swift */; };
 		68E2AF5F29C2F79F00403541 /* LatestProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF5E29C2F79F00403541 /* LatestProducts.swift */; };
 		68E2AF6129C2F86100403541 /* LatestCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF6029C2F86100403541 /* LatestCollectionVC.swift */; };
+		68E2AF6329C321B600403541 /* SignInPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF6229C321B600403541 /* SignInPageVC.swift */; };
+		68E2AF6529C326A000403541 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF6429C326A000403541 /* String+Ext.swift */; };
+		68E2AF6729C32F1F00403541 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF6629C32F1F00403541 /* LoginTextField.swift */; };
+		68E2AF6929C33B1200403541 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF6829C33B1200403541 /* UIColor+Extension.swift */; };
+		68E2AF6B29C33EBE00403541 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68E2AF6A29C33EBE00403541 /* Montserrat-Bold.ttf */; };
+		68E2AF6D29C3413A00403541 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68E2AF6C29C3413A00403541 /* Montserrat-SemiBold.ttf */; };
+		68E2AF6F29C3424400403541 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF6E29C3424400403541 /* AuthButton.swift */; };
+		68E2AF7229C353C000403541 /* EColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF7129C353C000403541 /* EColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +58,14 @@
 		68E2AF5C29C2F00A00403541 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		68E2AF5E29C2F79F00403541 /* LatestProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestProducts.swift; sourceTree = "<group>"; };
 		68E2AF6029C2F86100403541 /* LatestCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCollectionVC.swift; sourceTree = "<group>"; };
+		68E2AF6229C321B600403541 /* SignInPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPageVC.swift; sourceTree = "<group>"; };
+		68E2AF6429C326A000403541 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		68E2AF6629C32F1F00403541 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		68E2AF6829C33B1200403541 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		68E2AF6A29C33EBE00403541 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		68E2AF6C29C3413A00403541 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		68E2AF6E29C3424400403541 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		68E2AF7129C353C000403541 /* EColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +98,7 @@
 		68E2AF2829C1E90700403541 /* EShop */ = {
 			isa = PBXGroup;
 			children = (
+				68E2AF7329C3562000403541 /* Base */,
 				68E2AF5729C24C3100403541 /* Helpers */,
 				68E2AF5429C21ADE00403541 /* Models */,
 				68E2AF4F29C214A100403541 /* Extensions */,
@@ -106,6 +123,7 @@
 				68E2AF4429C1F39300403541 /* ChatVC.swift */,
 				68E2AF4629C1F3A400403541 /* ProfileVC.swift */,
 				68E2AF4829C1F40100403541 /* ESTabBarController.swift */,
+				68E2AF6229C321B600403541 /* SignInPageVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -116,6 +134,7 @@
 				68E2AF5B29C2EF6E00403541 /* Category */,
 				68E2AF5C29C2F00A00403541 /* ProductCell.swift */,
 				68E2AF6029C2F86100403541 /* LatestCollectionVC.swift */,
+				68E2AF7029C34A8300403541 /* Login */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -123,7 +142,9 @@
 		68E2AF4F29C214A100403541 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				68E2AF6829C33B1200403541 /* UIColor+Extension.swift */,
 				68E2AF5229C214CB00403541 /* UIView+Layout.swift */,
+				68E2AF6429C326A000403541 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -141,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				68E2AF5829C24C3B00403541 /* Fonts */,
+				68E2AF7129C353C000403541 /* EColors.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -149,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				68E2AF5929C24C5E00403541 /* Montserrat-VariableFont_wght.ttf */,
+				68E2AF6C29C3413A00403541 /* Montserrat-SemiBold.ttf */,
+				68E2AF6A29C33EBE00403541 /* Montserrat-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -160,6 +184,22 @@
 				68E2AF4B29C2132200403541 /* CategoryCollectionView.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		68E2AF7029C34A8300403541 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				68E2AF6629C32F1F00403541 /* LoginTextField.swift */,
+				68E2AF6E29C3424400403541 /* AuthButton.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		68E2AF7329C3562000403541 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +260,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E2AF6B29C33EBE00403541 /* Montserrat-Bold.ttf in Resources */,
 				68E2AF3629C1E90800403541 /* LaunchScreen.storyboard in Resources */,
 				68E2AF5A29C24C5E00403541 /* Montserrat-VariableFont_wght.ttf in Resources */,
 				68E2AF3329C1E90800403541 /* Assets.xcassets in Resources */,
+				68E2AF6D29C3413A00403541 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E2AF6529C326A000403541 /* String+Ext.swift in Sources */,
+				68E2AF6F29C3424400403541 /* AuthButton.swift in Sources */,
 				68E2AF4C29C2132200403541 /* CategoryCollectionView.swift in Sources */,
 				68E2AF4129C1EF1500403541 /* FavoritesVC.swift in Sources */,
 				68E2AF4929C1F40100403541 /* ESTabBarController.swift in Sources */,
@@ -244,11 +288,15 @@
 				68E2AF4329C1F38300403541 /* CartVC.swift in Sources */,
 				68E2AF4729C1F3A400403541 /* ProfileVC.swift in Sources */,
 				68E2AF3F29C1ED9100403541 /* HomeVC.swift in Sources */,
+				68E2AF6329C321B600403541 /* SignInPageVC.swift in Sources */,
 				68E2AF5329C214CB00403541 /* UIView+Layout.swift in Sources */,
+				68E2AF7229C353C000403541 /* EColors.swift in Sources */,
 				68E2AF2A29C1E90700403541 /* AppDelegate.swift in Sources */,
 				68E2AF2C29C1E90700403541 /* SceneDelegate.swift in Sources */,
 				68E2AF4E29C213BC00403541 /* CategoryCell.swift in Sources */,
 				68E2AF5629C21B0E00403541 /* Categories.swift in Sources */,
+				68E2AF6729C32F1F00403541 /* LoginTextField.swift in Sources */,
+				68E2AF6929C33B1200403541 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
