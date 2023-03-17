@@ -2,14 +2,13 @@
 //  LatestCollectionVC.swift
 //  EShop
 //
-//  Created by Kirill Karpovich on 17.03.23.
+//  Created by Kirill Karpovich on 16.03.23.
 //
 
 import UIKit
 
-
-class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
+class FlashSaleCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
     private let layout = UICollectionViewFlowLayout()
 
     override init(collectionViewLayout layout: UICollectionViewLayout) {
@@ -23,34 +22,20 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        collectionView.reloadData()
     }
     
     private func configure() {
-        self.collectionView.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)
-        collectionView.register(HomeCVHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCVHeader.identifier)
-        collectionView.delegate = self
+        self.collectionView!.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)
 
         view.backgroundColor = .green
         layout.collectionView?.backgroundColor = .green
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         collectionView.showsHorizontalScrollIndicator = false
-        layout.headerReferenceSize = CGSize(width: collectionView.frame.size.width, height: 70)
-        
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCVHeader.identifier, for: indexPath) as! HomeCVHeader
-        
-        headerView.title.text = "Latest Collection"
-        headerView.viewButton.setTitle("View All", for: .normal)
-        headerView.viewButton.addTarget(self, action: #selector(viewAllButtonTapped), for: .touchUpInside)
-        return headerView
     }
    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 115, height: 150)
+        return CGSize(width: 175, height: 220)
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -62,9 +47,4 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
         
         return cell
     }
-    
-    @objc private func viewAllButtonTapped() {
-          // Handle "View all" button tapped
-      }
-
 }

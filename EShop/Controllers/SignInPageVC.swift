@@ -65,8 +65,6 @@ class SignInVC: UIViewController {
         signInButton.constrainHeight(constant: 45)
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         
-        
-        
         appleAuthButton.anchor(top: nil, leading: googleAuthButton.leadingAnchor, bottom: view.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 130, right: 20))
         googleAuthButton.centerXInSuperview()
         googleAuthButton.anchor(top: nil, leading: nil, bottom: appleAuthButton.topAnchor, trailing: nil, padding: .init(top: 0, left: 20, bottom: 20, right: 20))
@@ -89,15 +87,15 @@ class SignInVC: UIViewController {
     }
     
     @objc private func signInButtonTapped() {
-        guard let email = emailTextField.text, email.isValidEmail else {
-            showAlert(withTitle: "Invalid email", message: "Please enter a valid email address.")
-            return
-        }
-        
-        guard let password = passwordTextField.text, password.count >= 6 else {
-            showAlert(withTitle: "Invalid password", message: "Password must be at least 6 characters long.")
-            return
-        }
+//        guard let email = emailTextField.text, email.isValidEmail else {
+//            showAlert(withTitle: "Invalid email", message: "Please enter a valid email address.")
+//            return
+//        }
+//        
+//        guard let password = passwordTextField.text, password.count >= 6 else {
+//            showAlert(withTitle: "Invalid password", message: "Password must be at least 6 characters long.")
+//            return
+//        }
         coordinator.coordinateToTabBar()
     }
     

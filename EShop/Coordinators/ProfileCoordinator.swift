@@ -7,7 +7,11 @@
 
 import UIKit
 
-class ProfileCoordinator: Coordinator {
+protocol ProfileFlow: AnyObject {
+    func coordinateToLogout()
+}
+
+class ProfileCoordinator: Coordinator, ProfileFlow {
     
     private let navigationController: UINavigationController
     
@@ -18,5 +22,10 @@ class ProfileCoordinator: Coordinator {
     func start() {
         let vc = ProfileVC(coordinator: self)
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func coordinateToLogout() {
+        let signInCoordinator = SignInCoordinator(navigationController: navigationController)
+        coordinate(to: signInCoordinator)
     }
 }

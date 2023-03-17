@@ -10,6 +10,8 @@ import UIKit
 class ProfileVC: UIViewController {
 
     private let coordinator: ProfileCoordinator
+    private let button = UIButton()
+    
     
     init(coordinator: ProfileCoordinator) {
         self.coordinator = coordinator
@@ -24,5 +26,15 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Profile"
         view.backgroundColor = .systemMint
+        view.addSubview(button)
+        button.setTitle("Log Out", for: .normal)
+        button.centerXInSuperview()
+        button.centerYInSuperview()
+        button.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
     }
+    
+    @objc func dismissVC() {
+        coordinator.coordinateToLogout()
+    }
+    
 }

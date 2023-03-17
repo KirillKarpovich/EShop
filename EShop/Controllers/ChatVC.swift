@@ -14,5 +14,4 @@ class ChatVC: UIViewController {
 
         view.backgroundColor = .green
     }
-    
 }

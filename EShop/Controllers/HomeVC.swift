@@ -21,7 +21,8 @@ class HomeVC: UIViewController {
     }
     
     private let categoryCollectionView = CategoryCollectionView(frame: .zero)
-    private let latestProductCollectionVC = LatestCollectionVC(collectionViewLayout: UICollectionViewFlowLayout())
+    private let flashSaleCollectionVC = FlashSaleCollectionVC(collectionViewLayout: UICollectionViewFlowLayout())
+    private let latestCollectionVC = LatestCollectionVC(collectionViewLayout: UICollectionViewFlowLayout())
     
     let categories: [Category] = [
         Category(icon: UIImage(named: "Phones"), title: "Phones"),
@@ -60,13 +61,16 @@ class HomeVC: UIViewController {
     }
     
     private func configureCategoryCollectionView() {
-        view.addSubviews(categoryCollectionView, latestProductCollectionVC.view)
+        view.addSubviews(categoryCollectionView, flashSaleCollectionVC.view, latestCollectionVC.view)
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
                 
-        latestProductCollectionVC.view.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 30, right: 0))
-        latestProductCollectionVC.view.constrainHeight(constant: 240)
+        flashSaleCollectionVC.view.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 30, right: 0))
+        flashSaleCollectionVC.view.constrainHeight(constant: 240)
+        
+        latestCollectionVC.view.anchor(top: nil, leading: view.leadingAnchor, bottom: flashSaleCollectionVC.view.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 30, right: 0))
+        latestCollectionVC.view.constrainHeight(constant: 190)
         
         NSLayoutConstraint.activate([
             categoryCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
