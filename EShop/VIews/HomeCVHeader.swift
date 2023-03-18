@@ -26,9 +26,12 @@ class HomeCVHeader: UICollectionReusableView {
         backgroundColor = .systemPink
         title.font = EFonts.monsterratBold(size: 18)
         
-        title.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil)
-        title.constrainWidth(constant: 30)
-        viewButton.anchor(top: topAnchor, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor)
-        viewButton.constrainWidth(constant: 30)
+    ////        title.anchor(top: nil, leading: self.leadingAnchor, bottom: nil, trailing: nil)
+    //        title.constrainWidth(constant: 30)
+    //        title.constrainHeight(constant: 20)
+    ////        viewButton.anchor(top: topAnchor, leading: nil, bottom: self.bottomAnchor, trailing: self.trailingAnchor)
+    //        viewButton.constrainWidth(constant: 30)
+    //        viewButton.constrainHeight(constant: 20)
+        
     }
 }

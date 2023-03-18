@@ -25,7 +25,8 @@ class FlashSaleCollectionVC: UICollectionViewController, UICollectionViewDelegat
     }
     
     private func configure() {
-        self.collectionView!.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)
+        collectionView!.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)
+        collectionView.register(HomeCVHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCVHeader.identifier)
 
         view.backgroundColor = .green
         layout.collectionView?.backgroundColor = .green
@@ -46,5 +47,14 @@ class FlashSaleCollectionVC: UICollectionViewController, UICollectionViewDelegat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.identifier, for: indexPath)
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCVHeader.identifier, for: indexPath)
+        return headerView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: 100, height: 2)
     }
 }

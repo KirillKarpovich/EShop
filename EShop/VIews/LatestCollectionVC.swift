@@ -23,12 +23,11 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        collectionView.reloadData()
     }
     
     private func configure() {
         self.collectionView.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)
-        collectionView.register(HomeCVHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCVHeader.identifier)
+        self.collectionView.register(HomeCVHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCVHeader.identifier)
         collectionView.delegate = self
 
         view.backgroundColor = .green
@@ -36,8 +35,6 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         collectionView.showsHorizontalScrollIndicator = false
-        layout.headerReferenceSize = CGSize(width: collectionView.frame.size.width, height: 70)
-        
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -48,7 +45,11 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
         headerView.viewButton.addTarget(self, action: #selector(viewAllButtonTapped), for: .touchUpInside)
         return headerView
     }
-   
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        CGSize(width: collectionView.frame.size.width/2, height: 1 )
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 115, height: 150)
     }
@@ -66,5 +67,4 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
     @objc private func viewAllButtonTapped() {
           // Handle "View all" button tapped
       }
-
 }
