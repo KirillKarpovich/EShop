@@ -21,7 +21,6 @@ class HomeVC: UIViewController{
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Trade by Kirill"
@@ -45,6 +44,8 @@ class HomeVC: UIViewController{
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         collectionView.register(LatestCollectionViewCell.self, forCellWithReuseIdentifier: LatestCollectionViewCell.identifier)
         collectionView.register(FlashSaleCollectionViewCell.self, forCellWithReuseIdentifier: FlashSaleCollectionViewCell.identifier)
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView")
+
         collectionView.backgroundColor = .gray
         collectionView.alwaysBounceVertical = true
         
@@ -100,4 +101,40 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             return CGSize(width: view.frame.size.width, height: 240)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+            // Return zero size for the first cell
+            if section == 0 {
+                return CGSize.zero
+            } else {
+                // Return the size you want for the header view
+                return CGSize(width: view.frame.size.width, height: 50)
+            }
+        }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if indexPath.section == 0 {
+            // Return nil for the first cell
+            return UICollectionReusableView()
+        } else {
+            // Dequeue a header view for the second and third cells
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderView", for: indexPath)
+            headerView.backgroundColor = .white
+            // Configure your header view here
+            let titleLabel = UILabel()
+            titleLabel.text = "Header Title"
+            titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+            titleLabel.translatesAutoresizingMaskIntoConstraints = false
+            headerView.addSubview(titleLabel)
+            NSLayoutConstraint.activate([
+                titleLabel.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 10),
+                titleLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 10),
+                titleLabel.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -10),
+                titleLabel.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -10),
+            ])
+            return headerView
+        }
+    }
 }
+

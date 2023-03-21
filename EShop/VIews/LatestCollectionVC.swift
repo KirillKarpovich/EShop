@@ -26,7 +26,6 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
         super.viewDidLoad()
         configure()
         fetchLatest()
-        print(products)
     }
     
     private func fetchLatest() {

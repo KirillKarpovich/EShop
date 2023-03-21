@@ -46,6 +46,7 @@
             collectionView!.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)
 
             view.backgroundColor = .green
+            collectionView.alwaysBounceHorizontal = true
             layout.collectionView?.backgroundColor = .green
             layout.scrollDirection = .horizontal
             layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
