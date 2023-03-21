@@ -77,7 +77,14 @@ class ProductCell: UICollectionViewCell {
         categoryLabel.constrainWidth(constant: 50)
         categoryLabel.constrainHeight(constant: 20)
         addButton.anchor(top: nil, leading: nil, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 6, right: 6))
-        likeButton.anchor(top: nil, leading: nil, bottom: contentView.bottomAnchor, trailing: addButton.leadingAnchor, padding: .init(top: 0, left: 0, bottom: 10, right: 5))
+        likeButton.anchor(top: nil, leading: nil, bottom: nil, trailing: addButton.leadingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 5))
+        likeButton.centerYAnchor.constraint(equalTo: addButton.centerYAnchor).isActive = true
+        addButton.constrainWidth(constant: contentView.frame.width/4)
+        addButton.constrainHeight(constant: contentView.frame.width/4)
+        likeButton.constrainWidth(constant: contentView.frame.width/5)
+        likeButton.constrainHeight(constant: contentView.frame.width/5)
+
+
     }
     
 }

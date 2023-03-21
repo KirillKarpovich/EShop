@@ -44,7 +44,6 @@ class CategoryCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
         self.collectionViewLayout = layout
         self.delegate = self
         self.dataSource = self
-//
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

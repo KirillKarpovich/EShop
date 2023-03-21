@@ -48,5 +48,4 @@ class CategoryCell: UICollectionViewCell {
             label.widthAnchor.constraint(equalTo: imageView.widthAnchor)
         ])
     }
-
 }

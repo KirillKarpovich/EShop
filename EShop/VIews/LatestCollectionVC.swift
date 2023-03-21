@@ -26,8 +26,10 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     private func configure() {
-        self.collectionView.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)
-        self.collectionView.register(HomeCVHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCVHeader.identifier)
+        self.collectionView.register(
+            ProductCell.self,
+            forCellWithReuseIdentifier: ProductCell.identifier
+        )
         collectionView.delegate = self
 
         view.backgroundColor = .green
@@ -37,18 +39,18 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
         collectionView.showsHorizontalScrollIndicator = false
     }
     
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCVHeader.identifier, for: indexPath) as! HomeCVHeader
-        
-        headerView.title.text = "Latest Collection"
-        headerView.viewButton.setTitle("View All", for: .normal)
-        headerView.viewButton.addTarget(self, action: #selector(viewAllButtonTapped), for: .touchUpInside)
-        return headerView
-    }
+//    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCVHeader.identifier, for: indexPath) as! HomeCVHeader
+//
+//        headerView.title.text = "Latest Collection"
+//        headerView.viewButton.setTitle("View All", for: .normal)
+//        headerView.viewButton.addTarget(self, action: #selector(viewAllButtonTapped), for: .touchUpInside)
+//        return headerView
+//    }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: collectionView.frame.size.width/2, height: 1 )
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        CGSize(width: collectionView.frame.size.width/2, height: 1 )
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 115, height: 150)

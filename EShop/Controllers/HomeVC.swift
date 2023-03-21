@@ -45,6 +45,7 @@ class HomeVC: UIViewController{
         collectionView.dataSource = self
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         collectionView.register(LatestCollectionViewCell.self, forCellWithReuseIdentifier: LatestCollectionViewCell.identifier)
+        collectionView.register(FlashSaleCollectionViewCell.self, forCellWithReuseIdentifier: FlashSaleCollectionViewCell.identifier)
         collectionView.backgroundColor = .gray
         collectionView.alwaysBounceVertical = true
         
@@ -79,12 +80,14 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item == 0{
+        if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath)
             return cell
-        }
-        else {
+        } else if indexPath.item == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LatestCollectionViewCell.identifier, for: indexPath)
+            return cell
+        } else  {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlashSaleCollectionViewCell.identifier, for: indexPath)
             return cell
         }
     }
@@ -98,5 +101,4 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             return CGSize(width: view.frame.size.width, height: 240)
         }
     }
-
 }

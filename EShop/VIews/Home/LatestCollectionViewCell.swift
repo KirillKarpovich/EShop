@@ -10,9 +10,13 @@ import UIKit
 class LatestCollectionViewCell: UICollectionViewCell {
     static let identifier = String(describing: LatestCollectionViewCell.self)
     
+    private let latestCollectionVC = LatestCollectionVC(collectionViewLayout: UICollectionViewFlowLayout())
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .systemMint
+        contentView.addSubview(latestCollectionVC.view)
+        latestCollectionVC.view.fillSuperview()
     }
     
     required init?(coder: NSCoder) {
