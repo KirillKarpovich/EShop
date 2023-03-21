@@ -11,6 +11,8 @@ import UIKit
 class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let layout = UICollectionViewFlowLayout()
+    
+    private var products = [Products]()
 
     override init(collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: self.layout)
@@ -23,6 +25,23 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        fetchLatest()
+        print(products)
+    }
+    
+    private func fetchLatest() {
+        NetworkManager.shared.fetchLatest { [weak self] (response: Response?, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            if let products = response?.latest {
+                self?.products = products
+                DispatchQueue.main.async {
+                    self?.collectionView.reloadData()
+                }
+            }
+        }
     }
     
     private func configure() {
@@ -57,12 +76,14 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return products.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.identifier, for: indexPath)
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.identifier, for: indexPath) as? ProductCell else {
+            return UICollectionViewCell()
+        }
+        cell.setLatest(with: products[indexPath.item])
         return cell
     }
     

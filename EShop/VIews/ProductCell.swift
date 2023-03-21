@@ -19,6 +19,8 @@ class ProductCell: UICollectionViewCell {
     let likeButton = UIButton()
     let addButton = UIButton()
     
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -33,13 +35,28 @@ class ProductCell: UICollectionViewCell {
 //        avatarImageView.image = nil
 //    }
     
+    func setFlashSale(with product: Products) {
+        nameLabel.text = product.name
+        categoryLabel.text = product.category
+        discountLabel.text = String("\(product.discount!)% off")
+        priceLabel.text = String("$ \(product.price)")
+    }
+    
+    func setLatest(with product: Products) {
+        nameLabel.text = product.name
+        categoryLabel.text = product.category
+        priceLabel.text = String("$ \(product.price)")
+        discountLabel.isHidden = true
+        avatarImageView.isHidden = true
+        likeButton.isHidden = true
+    }
+    
     private func configure() {
         backgroundColor = .systemMint
         layer.cornerRadius = 15
         layer.masksToBounds = true
         contentView.addSubviews(discountLabel, avatarImageView, categoryLabel, priceLabel, nameLabel, addButton, likeButton)
         
-        discountLabel.text = "30% off"
         discountLabel.font = EFonts.monsterratBold(size: 11)
         discountLabel.textAlignment = .center
         discountLabel.textColor = .white
@@ -47,15 +64,18 @@ class ProductCell: UICollectionViewCell {
         discountLabel.layer.masksToBounds = true
         discountLabel.backgroundColor = .red
 
-        priceLabel.text = "33,0"
-        priceLabel.font = UIFont(name: "Montserrat", size: 10)
+        priceLabel.font = EFonts.monsterratSemiBold(size: 10)
+        priceLabel.textColor = .white
         
-        nameLabel.text = "New balance sneakers"
-        nameLabel.font = EFonts.monsterratSemiBold(size: 14)
-        nameLabel.numberOfLines = 0
+        nameLabel.font = EFonts.monsterratSemiBold(size: 0)
+        nameLabel.numberOfLines = 2
+        nameLabel.textColor = .white
+        let maxFontSize = min(contentView.frame.width / 14, 12)
 
-        categoryLabel.text = "Kids"
-        categoryLabel.font = UIFont(name: "Montserrat", size: 10)
+        nameLabel.font = EFonts.monsterratBold(size: maxFontSize)
+//        nameLabel.sizeToFit()
+
+        categoryLabel.font = EFonts.monsterratSemiBold(size: 10)
         categoryLabel.textColor = .black
         categoryLabel.textAlignment = .center
         categoryLabel.layer.cornerRadius = 10
@@ -71,9 +91,10 @@ class ProductCell: UICollectionViewCell {
         discountLabel.constrainHeight(constant: 20)
         avatarImageView.anchor(top: contentView.topAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 7, left: 10, bottom: 0, right: 0))
         priceLabel.anchor(top: nil, leading: contentView.leadingAnchor, bottom: contentView.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 10, bottom: 16, right: 0))
-        nameLabel.anchor(top: nil, leading: contentView.leadingAnchor, bottom: priceLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 10, bottom: 16, right: 0))
-        nameLabel.constrainWidth(constant: 100)
-        categoryLabel.anchor(top: nil, leading: contentView.leadingAnchor, bottom: nameLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 10, bottom: 12, right: 0))
+        nameLabel.anchor(top: categoryLabel.bottomAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 3, left: 10, bottom: 0, right: 0))
+        nameLabel.constrainWidth(constant: contentView.frame.size.width/2)
+//        nameLabel.constrainHeight(constant: contentView.frame.size.height/5)
+        categoryLabel.anchor(top: contentView.topAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: contentView.frame.size.height/2, left: 10, bottom: 0, right: 0))
         categoryLabel.constrainWidth(constant: 50)
         categoryLabel.constrainHeight(constant: 20)
         addButton.anchor(top: nil, leading: nil, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 6, right: 6))

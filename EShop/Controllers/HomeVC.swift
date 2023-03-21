@@ -25,7 +25,6 @@ class HomeVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Trade by Kirill"
-        view.backgroundColor = .white
         navControllerConfig()
         configureSearchController()
         configureCategoryCollectionView()

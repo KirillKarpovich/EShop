@@ -19,8 +19,11 @@ class NetworkManager {
     func fetchLatest(completion: @escaping (Response?, Error?) -> ()) {
         let urlString = baseURL + "cc0071a1-f06e-48fa-9e90-b1c2a61eaca7"
         fetchGenericJSONData(urlString: urlString, completion: completion)
-        print(urlString)
-        
+    }
+    
+    func fetchFlashSale(completion: @escaping (Response?, Error?) -> ()) {
+        let urlString = baseURL + "a9ceeb6e-416d-4352-bde6-2203416576ac"
+        fetchGenericJSONData(urlString: urlString, completion: completion)
     }
     
     func fetchGenericJSONData<T: Decodable>(urlString: String, completion: @escaping (T?, Error?) -> ()) {

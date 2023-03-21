@@ -15,7 +15,7 @@ struct Response: Decodable {
 struct Products: Decodable {
     let category: String
     let name: String
-    let price: Int
+    let price: Double
     let discount: Int?
     let imageUrl: String?
 }
