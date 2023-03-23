@@ -8,15 +8,26 @@
 import UIKit
 
 class ProfileTableCell: UITableViewCell {
+    static let identifier = String(describing: ProfileTableCell.self)
+    
+    let cellImageView = UIImageView()
+    let cellLabel = UILabel()
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        configure()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func configure() {
+        contentView.addSubviews(cellImageView, cellLabel)
+        cellLabel.font = EFonts.monsterrat(size: 18)
+        cellImageView.contentMode = .scaleAspectFit
+        
+        cellImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil)
+        cellLabel.anchor(top: topAnchor, leading: cellImageView.trailingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 10, bottom: 0, right: 0))
     }
 }

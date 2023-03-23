@@ -44,14 +44,14 @@
 		68E2AF8429C367BA00403541 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF8329C367BA00403541 /* ProfileCoordinator.swift */; };
 		68E2AF8629C492EF00403541 /* LatestCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF8529C492EF00403541 /* LatestCollectionVC.swift */; };
 		68E2AF8829C4A4C000403541 /* HomeCVHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF8729C4A4C000403541 /* HomeCVHeader.swift */; };
-		68E2AF8B29C4CC7000403541 /* ProfileTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF8A29C4CC7000403541 /* ProfileTableVC.swift */; };
-		68E2AF8D29C4CD6000403541 /* ProfileCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF8C29C4CD6000403541 /* ProfileCategory.swift */; };
 		68E2AF9029C4CDBF00403541 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF8F29C4CDBF00403541 /* ProfileTableCell.swift */; };
 		68E2AF9629C5BD4200403541 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF9529C5BD4200403541 /* CategoryCollectionViewCell.swift */; };
 		68E2AF9829C5CFC500403541 /* LatestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF9729C5CFC500403541 /* LatestCollectionViewCell.swift */; };
 		68E2AF9A29C5E21200403541 /* FlashSaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF9929C5E21200403541 /* FlashSaleCollectionViewCell.swift */; };
 		68E2AF9D29C835CB00403541 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF9C29C835CB00403541 /* NetworkManager.swift */; };
 		68E2AF9F29CB265800403541 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF9E29CB265800403541 /* HomeHeaderView.swift */; };
+		68E2AFA229CB708700403541 /* ProfileCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA129CB708700403541 /* ProfileCategory.swift */; };
+		68E2AFA529CCB86200403541 /* ESButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA429CCB86200403541 /* ESButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,14 +94,14 @@
 		68E2AF8329C367BA00403541 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		68E2AF8529C492EF00403541 /* LatestCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCollectionVC.swift; sourceTree = "<group>"; };
 		68E2AF8729C4A4C000403541 /* HomeCVHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCVHeader.swift; sourceTree = "<group>"; };
-		68E2AF8A29C4CC7000403541 /* ProfileTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableVC.swift; sourceTree = "<group>"; };
-		68E2AF8C29C4CD6000403541 /* ProfileCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCategory.swift; sourceTree = "<group>"; };
 		68E2AF8F29C4CDBF00403541 /* ProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		68E2AF9529C5BD4200403541 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		68E2AF9729C5CFC500403541 /* LatestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCollectionViewCell.swift; sourceTree = "<group>"; };
 		68E2AF9929C5E21200403541 /* FlashSaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSaleCollectionViewCell.swift; sourceTree = "<group>"; };
 		68E2AF9C29C835CB00403541 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		68E2AF9E29CB265800403541 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		68E2AFA129CB708700403541 /* ProfileCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCategory.swift; sourceTree = "<group>"; };
+		68E2AFA429CCB86200403541 /* ESButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +156,8 @@
 		68E2AF3D29C1ED4E00403541 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				68E2AFA029CB6C0700403541 /* Home */,
 				68E2AF8929C4CC4200403541 /* Profile */,
-				68E2AF3E29C1ED9100403541 /* HomeVC.swift */,
 				68E2AF4029C1EF1500403541 /* FavoritesVC.swift */,
 				68E2AF4229C1F38300403541 /* CartVC.swift */,
 				68E2AF4429C1F39300403541 /* ChatVC.swift */,
@@ -171,14 +171,12 @@
 		68E2AF4A29C2113300403541 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				68E2AFA329CCB83900403541 /* Buttons */,
 				68E2AF9429C5BD2B00403541 /* Home */,
 				68E2AF8E29C4CD9800403541 /* Profile */,
 				68E2AF7029C34A8300403541 /* Login */,
 				68E2AF5B29C2EF6E00403541 /* Category */,
 				68E2AF5C29C2F00A00403541 /* ProductCell.swift */,
-				68E2AF6029C2F86100403541 /* FlashSaleCollectionVC.swift */,
-				68E2AF8529C492EF00403541 /* LatestCollectionVC.swift */,
-				68E2AF8729C4A4C000403541 /* HomeCVHeader.swift */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -198,7 +196,7 @@
 			children = (
 				68E2AF5529C21B0E00403541 /* Categories.swift */,
 				68E2AF5E29C2F79F00403541 /* Response.swift */,
-				68E2AF8C29C4CD6000403541 /* ProfileCategory.swift */,
+				68E2AFA129CB708700403541 /* ProfileCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				68E2AF5829C24C3B00403541 /* Fonts */,
-				68E2AF7129C353C000403541 /* Fonts.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -215,6 +212,7 @@
 		68E2AF5829C24C3B00403541 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				68E2AF7129C353C000403541 /* Fonts.swift */,
 				68E2AF5929C24C5E00403541 /* Montserrat-VariableFont_wght.ttf */,
 				68E2AF6C29C3413A00403541 /* Montserrat-SemiBold.ttf */,
 				68E2AF6A29C33EBE00403541 /* Montserrat-Bold.ttf */,
@@ -264,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				68E2AF4629C1F3A400403541 /* ProfileVC.swift */,
-				68E2AF8A29C4CC7000403541 /* ProfileTableVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -280,6 +277,7 @@
 		68E2AF9429C5BD2B00403541 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				68E2AF8729C4A4C000403541 /* HomeCVHeader.swift */,
 				68E2AF9529C5BD4200403541 /* CategoryCollectionViewCell.swift */,
 				68E2AF9729C5CFC500403541 /* LatestCollectionViewCell.swift */,
 				68E2AF9929C5E21200403541 /* FlashSaleCollectionViewCell.swift */,
@@ -294,6 +292,24 @@
 				68E2AF9C29C835CB00403541 /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		68E2AFA029CB6C0700403541 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				68E2AF3E29C1ED9100403541 /* HomeVC.swift */,
+				68E2AF6029C2F86100403541 /* FlashSaleCollectionVC.swift */,
+				68E2AF8529C492EF00403541 /* LatestCollectionVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		68E2AFA329CCB83900403541 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				68E2AFA429CCB86200403541 /* ESButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +390,7 @@
 				68E2AF9A29C5E21200403541 /* FlashSaleCollectionViewCell.swift in Sources */,
 				68E2AF9D29C835CB00403541 /* NetworkManager.swift in Sources */,
 				68E2AF6F29C3424400403541 /* AuthButton.swift in Sources */,
+				68E2AFA229CB708700403541 /* ProfileCategory.swift in Sources */,
 				68E2AF9829C5CFC500403541 /* LatestCollectionViewCell.swift in Sources */,
 				68E2AF4C29C2132200403541 /* CategoryCollectionView.swift in Sources */,
 				68E2AF8229C3640000403541 /* HomeCoordinator.swift in Sources */,
@@ -389,7 +406,7 @@
 				68E2AF9029C4CDBF00403541 /* ProfileTableCell.swift in Sources */,
 				68E2AF5D29C2F00A00403541 /* ProductCell.swift in Sources */,
 				68E2AF4329C1F38300403541 /* CartVC.swift in Sources */,
-				68E2AF8B29C4CC7000403541 /* ProfileTableVC.swift in Sources */,
+				68E2AFA529CCB86200403541 /* ESButton.swift in Sources */,
 				68E2AF4729C1F3A400403541 /* ProfileVC.swift in Sources */,
 				68E2AF7729C3596400403541 /* AppCoordinator.swift in Sources */,
 				68E2AF3F29C1ED9100403541 /* HomeVC.swift in Sources */,
@@ -399,7 +416,6 @@
 				68E2AF5329C214CB00403541 /* UIView+Layout.swift in Sources */,
 				68E2AF7229C353C000403541 /* Fonts.swift in Sources */,
 				68E2AF2A29C1E90700403541 /* AppDelegate.swift in Sources */,
-				68E2AF8D29C4CD6000403541 /* ProfileCategory.swift in Sources */,
 				68E2AF8829C4A4C000403541 /* HomeCVHeader.swift in Sources */,
 				68E2AF7529C356BD00403541 /* Coordinator.swift in Sources */,
 				68E2AF2C29C1E90700403541 /* SceneDelegate.swift in Sources */,

@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 struct Category {
     let icon: UIImage?
     let title: String

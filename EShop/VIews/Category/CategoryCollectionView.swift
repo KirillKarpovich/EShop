@@ -31,7 +31,6 @@ class CategoryCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
     }
     
     private func configure() {
-        backgroundColor = .systemGreen
         self.translatesAutoresizingMaskIntoConstraints = false
         self.alwaysBounceHorizontal = true
         self.register(

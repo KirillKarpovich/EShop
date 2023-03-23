@@ -50,25 +50,10 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
         )
         collectionView.delegate = self
 
-        view.backgroundColor = .green
-        layout.collectionView?.backgroundColor = .green
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         collectionView.showsHorizontalScrollIndicator = false
     }
-    
-//    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCVHeader.identifier, for: indexPath) as! HomeCVHeader
-//
-//        headerView.title.text = "Latest Collection"
-//        headerView.viewButton.setTitle("View All", for: .normal)
-//        headerView.viewButton.addTarget(self, action: #selector(viewAllButtonTapped), for: .touchUpInside)
-//        return headerView
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        CGSize(width: collectionView.frame.size.width/2, height: 1 )
-//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 115, height: 150)
@@ -85,8 +70,4 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
         cell.setLatest(with: products[indexPath.item])
         return cell
     }
-    
-    @objc private func viewAllButtonTapped() {
-          // Handle "View all" button tapped
-      }
 }

@@ -14,7 +14,7 @@ class SignInVC: UIViewController {
     let lastNameTextField = LoginTextField(placeholder: "Last name")
     let emailTextField = LoginTextField(placeholder: "Email")
     let passwordTextField = LoginTextField(placeholder: "Password")
-    let signInButton = UIButton()
+    let signInButton = ESButton(title: "Sign in")
     let googleAuthButton = AuthButton(title: "Sign in with Google", imageName: "Google")
     let appleAuthButton = AuthButton(title: "Sign in with Apple", imageName: "Apple")
     let questionLabel = UILabel()
@@ -57,11 +57,7 @@ class SignInVC: UIViewController {
         
         emailTextField.keyboardType = .emailAddress
         passwordTextField.isSecureTextEntry = true
-        
-        signInButton.setTitle("Sign in", for: .normal)
-        signInButton.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 17)
-        signInButton.backgroundColor = UIColor(hex: "#4E55D7")
-        signInButton.layer.cornerRadius = 15
+
         signInButton.constrainHeight(constant: 45)
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         
@@ -72,7 +68,13 @@ class SignInVC: UIViewController {
     }
     
     private func setupStackView() {
-        let stackView = UIStackView(arrangedSubviews: [firstNameTextField, lastNameTextField,emailTextField, passwordTextField, signInButton])
+        let stackView = UIStackView(arrangedSubviews: [
+            firstNameTextField,
+            lastNameTextField,
+            emailTextField,
+            passwordTextField,
+            signInButton
+        ])
         stackView.axis = .vertical
         stackView.spacing = 35
         stackView.translatesAutoresizingMaskIntoConstraints = false
