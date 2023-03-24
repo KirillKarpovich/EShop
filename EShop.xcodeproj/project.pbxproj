@@ -49,9 +49,9 @@
 		68E2AF9829C5CFC500403541 /* LatestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF9729C5CFC500403541 /* LatestCollectionViewCell.swift */; };
 		68E2AF9A29C5E21200403541 /* FlashSaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF9929C5E21200403541 /* FlashSaleCollectionViewCell.swift */; };
 		68E2AF9D29C835CB00403541 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF9C29C835CB00403541 /* NetworkManager.swift */; };
-		68E2AF9F29CB265800403541 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AF9E29CB265800403541 /* HomeHeaderView.swift */; };
 		68E2AFA229CB708700403541 /* ProfileCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA129CB708700403541 /* ProfileCategory.swift */; };
 		68E2AFA529CCB86200403541 /* ESButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA429CCB86200403541 /* ESButton.swift */; };
+		68E2AFA729CD881F00403541 /* ProfileTVHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA629CD881F00403541 /* ProfileTVHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,9 +99,9 @@
 		68E2AF9729C5CFC500403541 /* LatestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCollectionViewCell.swift; sourceTree = "<group>"; };
 		68E2AF9929C5E21200403541 /* FlashSaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSaleCollectionViewCell.swift; sourceTree = "<group>"; };
 		68E2AF9C29C835CB00403541 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		68E2AF9E29CB265800403541 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		68E2AFA129CB708700403541 /* ProfileCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCategory.swift; sourceTree = "<group>"; };
 		68E2AFA429CCB86200403541 /* ESButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESButton.swift; sourceTree = "<group>"; };
+		68E2AFA629CD881F00403541 /* ProfileTVHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				68E2AF8F29C4CDBF00403541 /* ProfileTableCell.swift */,
+				68E2AFA629CD881F00403541 /* ProfileTVHeader.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -281,7 +282,6 @@
 				68E2AF9529C5BD4200403541 /* CategoryCollectionViewCell.swift */,
 				68E2AF9729C5CFC500403541 /* LatestCollectionViewCell.swift */,
 				68E2AF9929C5E21200403541 /* FlashSaleCollectionViewCell.swift */,
-				68E2AF9E29CB265800403541 /* HomeHeaderView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -405,6 +405,7 @@
 				68E2AF2E29C1E90700403541 /* ViewController.swift in Sources */,
 				68E2AF9029C4CDBF00403541 /* ProfileTableCell.swift in Sources */,
 				68E2AF5D29C2F00A00403541 /* ProductCell.swift in Sources */,
+				68E2AFA729CD881F00403541 /* ProfileTVHeader.swift in Sources */,
 				68E2AF4329C1F38300403541 /* CartVC.swift in Sources */,
 				68E2AFA529CCB86200403541 /* ESButton.swift in Sources */,
 				68E2AF4729C1F3A400403541 /* ProfileVC.swift in Sources */,
@@ -421,7 +422,6 @@
 				68E2AF2C29C1E90700403541 /* SceneDelegate.swift in Sources */,
 				68E2AF4E29C213BC00403541 /* CategoryCell.swift in Sources */,
 				68E2AF5629C21B0E00403541 /* Categories.swift in Sources */,
-				68E2AF9F29CB265800403541 /* HomeHeaderView.swift in Sources */,
 				68E2AF6729C32F1F00403541 /* LoginTextField.swift in Sources */,
 				68E2AF8429C367BA00403541 /* ProfileCoordinator.swift in Sources */,
 				68E2AF6929C33B1200403541 /* UIColor+Extension.swift in Sources */,

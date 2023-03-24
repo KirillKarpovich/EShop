@@ -12,6 +12,8 @@ class ProfileTableCell: UITableViewCell {
     
     let cellImageView = UIImageView()
     let cellLabel = UILabel()
+    var disclosureImageView = UIImageView()
+    let walletLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,11 +25,18 @@ class ProfileTableCell: UITableViewCell {
     }
     
     private func configure() {
-        contentView.addSubviews(cellImageView, cellLabel)
+        contentView.addSubviews(cellImageView, cellLabel, disclosureImageView, walletLabel)
         cellLabel.font = EFonts.monsterrat(size: 18)
         cellImageView.contentMode = .scaleAspectFit
         
-        cellImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil)
+        disclosureImageView.anchor(top: topAnchor, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: contentView.frame.size.height/2, left: 0, bottom: contentView.frame.size.height/2, right: 20))
+        walletLabel.anchor(top: topAnchor, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: contentView.frame.size.height/2, left: 0, bottom: contentView.frame.size.height/2, right: 10))
+        
+        disclosureImageView.image = UIImage(named: "disclosureIndicator")
+
+        cellImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 20, bottom: 0, right: 0))
         cellLabel.anchor(top: topAnchor, leading: cellImageView.trailingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 10, bottom: 0, right: 0))
+        
+        
     }
 }
