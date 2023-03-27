@@ -20,18 +20,34 @@ class ESTabBarController: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarConfiguration()
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.changeHeight()
+    }
+ 
     
     func tabBarConfiguration() {
         let tabBarAppearance = UITabBar.appearance()
-
-        tabBarAppearance.tintColor = .systemPink
+        
+        tabBarAppearance.tintColor = .darkGray
         tabBarAppearance.backgroundColor = .white
         tabBarAppearance.selectionIndicatorImage = UIImage(named: "Round")
         tabBar.layer.cornerRadius = 25
         tabBar.clipsToBounds = true
+    }
+    
+    func changeHeight() {
+        if UIDevice().userInterfaceIdiom == .phone {
+            var tabFrame = tabBar.frame
+            tabFrame.size.height = 100
+            tabFrame.origin.y = view.frame.size.height-100
+            tabBar.frame = tabFrame
+        }
     }
 }

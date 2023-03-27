@@ -19,8 +19,6 @@ class ProductCell: UICollectionViewCell {
     let likeButton = UIButton()
     let addButton = UIButton()
     
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -29,11 +27,6 @@ class ProductCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-//    override func prepareForReuse() {
-//        cellImageView.image = nil
-//        avatarImageView.image = nil
-//    }
     
     func setFlashSale(with product: FlashSale) {
         nameLabel.text = product.name
@@ -60,7 +53,6 @@ class ProductCell: UICollectionViewCell {
     }
     
     private func configure() {
-        backgroundColor = .systemMint
         layer.cornerRadius = 15
         layer.masksToBounds = true
         contentView.addSubviews(cellImageView, discountLabel, avatarImageView, categoryLabel, priceLabel, nameLabel, addButton, likeButton)
@@ -68,7 +60,6 @@ class ProductCell: UICollectionViewCell {
         
         cellImageView.fillSuperview()
         cellImageView.contentMode = .scaleAspectFill
-
 
         discountLabel.font = EFonts.monsterratBold(size: 11)
         discountLabel.textAlignment = .center
@@ -82,7 +73,7 @@ class ProductCell: UICollectionViewCell {
         
         nameLabel.font = EFonts.monsterratSemiBold(size: 0)
         nameLabel.numberOfLines = 2
-        nameLabel.textColor = .white
+        nameLabel.textColor = .systemBackground
 
         nameLabel.font = EFonts.monsterratBold(size: maxFontSize)
 
@@ -119,8 +110,5 @@ class ProductCell: UICollectionViewCell {
         likeButton.centerYAnchor.constraint(equalTo: addButton.centerYAnchor).isActive = true
         likeButton.constrainWidth(constant: contentView.frame.width/5)
         likeButton.constrainHeight(constant: contentView.frame.width/5)
-
-
     }
-    
 }

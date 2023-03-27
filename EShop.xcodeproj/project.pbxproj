@@ -53,6 +53,7 @@
 		68E2AFA529CCB86200403541 /* ESButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA429CCB86200403541 /* ESButton.swift */; };
 		68E2AFA729CD881F00403541 /* ProfileTVHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA629CD881F00403541 /* ProfileTVHeader.swift */; };
 		68E2AFA929CF5C9200403541 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA829CF5C9200403541 /* DataProvider.swift */; };
+		68E2AFAB29D1E95500403541 /* UISearchBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFAA29D1E95500403541 /* UISearchBar+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		68E2AFA429CCB86200403541 /* ESButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESButton.swift; sourceTree = "<group>"; };
 		68E2AFA629CD881F00403541 /* ProfileTVHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVHeader.swift; sourceTree = "<group>"; };
 		68E2AFA829CF5C9200403541 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		68E2AFAA29D1E95500403541 /* UISearchBar+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				68E2AF6829C33B1200403541 /* UIColor+Extension.swift */,
 				68E2AF5229C214CB00403541 /* UIView+Layout.swift */,
 				68E2AF6429C326A000403541 /* String+Ext.swift */,
+				68E2AFAA29D1E95500403541 /* UISearchBar+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				68E2AF4329C1F38300403541 /* CartVC.swift in Sources */,
 				68E2AFA529CCB86200403541 /* ESButton.swift in Sources */,
 				68E2AF4729C1F3A400403541 /* ProfileVC.swift in Sources */,
+				68E2AFAB29D1E95500403541 /* UISearchBar+Ext.swift in Sources */,
 				68E2AF7729C3596400403541 /* AppCoordinator.swift in Sources */,
 				68E2AF3F29C1ED9100403541 /* HomeVC.swift in Sources */,
 				68E2AF8629C492EF00403541 /* LatestCollectionVC.swift in Sources */,

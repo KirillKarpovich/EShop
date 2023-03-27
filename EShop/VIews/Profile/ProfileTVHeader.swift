@@ -16,7 +16,9 @@ class ProfileTVHeader: UITableViewHeaderFooterView, UIImagePickerControllerDeleg
 
     let imageView = UIImageView()
     private let nameLabel = UILabel()
+    private let changeFotoButton = UIButton()
     private let uploadButton = ESButton(title: "Upload item")
+    
     
     weak var delegate: ProfileTVHeaderDelegate?
 
@@ -26,7 +28,7 @@ class ProfileTVHeader: UITableViewHeaderFooterView, UIImagePickerControllerDeleg
         configure()
 
         uploadButton.addTarget(self, action: #selector(uploadButtonTapped), for: .touchUpInside)
-
+        changeFotoButton.addTarget(self, action: #selector(uploadButtonTapped), for: .touchUpInside)
     }
 
     required init?(coder: NSCoder) {
@@ -36,6 +38,7 @@ class ProfileTVHeader: UITableViewHeaderFooterView, UIImagePickerControllerDeleg
     private func configure() {
         addSubviews(
             imageView,
+            changeFotoButton,
             nameLabel,
             uploadButton
         )
@@ -47,12 +50,21 @@ class ProfileTVHeader: UITableViewHeaderFooterView, UIImagePickerControllerDeleg
         imageView.centerXInSuperview()
         imageView.constrainHeight(constant: 60)
         imageView.constrainWidth(constant: 60)
+        imageView.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: -25, left: 0, bottom: 0, right: 0))
         imageView.layer.cornerRadius = 30 
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
+        
+        changeFotoButton.setTitle("Change photo", for: .normal)
+        changeFotoButton.setTitleColor(.gray, for: .normal)
+        changeFotoButton.titleLabel?.font = EFonts.monsterrat(size: 8)
+        changeFotoButton.centerXInSuperview()
+        changeFotoButton.anchor(top: imageView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 2, left: 0, bottom: 0, right: 0))
+        changeFotoButton.constrainHeight(constant: 20)
+        changeFotoButton.constrainWidth(constant: 60)
 
         nameLabel.centerXInSuperview()
-        nameLabel.anchor(top: imageView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 20, left: 0, bottom: 0, right: 0))
+        nameLabel.anchor(top: imageView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 25, left: 0, bottom: 0, right: 0))
 
         uploadButton.centerXInSuperview()
         uploadButton.constrainHeight(constant: 40)

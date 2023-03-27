@@ -24,7 +24,7 @@ class HomeCVHeader: UICollectionReusableView {
     
     private func configure() {
         addSubviews(title, viewButton)
-        title.font = EFonts.monsterrat(size: 12)
+        title.font = EFonts.monsterrat(size: 14)
         viewButton.setTitle("View all", for: .normal)
         viewButton.setTitleColor(.gray, for: .normal)
         viewButton.titleLabel?.font = EFonts.monsterrat(size: 10)

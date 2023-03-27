@@ -51,7 +51,7 @@ class ProfileVC: UITableViewController, UIImagePickerControllerDelegate & UINavi
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        140
+        170
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,7 +78,7 @@ class ProfileVC: UITableViewController, UIImagePickerControllerDelegate & UINavi
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        70
+        65
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

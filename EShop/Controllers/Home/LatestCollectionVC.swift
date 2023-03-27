@@ -27,9 +27,9 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-//        fetchLatest()
         loadData()
     }
+    
     
     private func loadData() {
         DataProvider.shared.fetchData { [weak self] result in
@@ -37,27 +37,14 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
             case .success(let (_, latestResponse)):
                 self?.latestData = latestResponse
                 self?.products = latestResponse.latest
-                self?.collectionView.reloadData()
+                DispatchQueue.main.async {
+                    self?.collectionView.reloadData()
+                }
             case .failure(let error):
                 print("Failed to load data: \(error)")
             }
         }
      }
-    
-//    private func fetchLatest() {
-//        NetworkManager.shared.fetchLatest { [weak self] (response: Response?, error) in
-//            if let error = error {
-//                print(error)
-//                return
-//            }
-//            if let products = response?.latest {
-//                self?.products = products
-//                DispatchQueue.main.async {
-//                    self?.collectionView.reloadData()
-//                }
-//            }
-//        }
-//    }
     
     private func configure() {
         self.collectionView.register(

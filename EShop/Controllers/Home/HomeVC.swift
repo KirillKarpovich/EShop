@@ -48,22 +48,65 @@ class HomeVC: UIViewController{
         view.addSubview(collectionView)
         collectionView.fillSuperview()
     }
-    
+
     func navControllerConfig() {
-        navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .refresh, target: self, action: nil)
-        navigationItem.leftBarButtonItem = .init(image: UIImage(named: "ProfileMenu"), style: .plain, target: self, action: nil)
-        navigationController?.navigationBar.backgroundColor = .systemGray3
+        let titleLabel = UILabel()
+        titleLabel.text = "Trade by bata"
+        titleLabel.font = EFonts.monsterratBold(size: 20)
+        titleLabel.sizeToFit()
+        navigationItem.titleView = titleLabel
+
+        let leftButton = UIButton(type: .custom)
+        leftButton.setImage(UIImage(named: "ProfileMenu"), for: .normal)
+        leftButton.addTarget(self, action: #selector(leftButtonTapped), for: .touchUpInside)
+        let leftBarButton = UIBarButtonItem(customView: leftButton)
+        navigationItem.leftBarButtonItem = leftBarButton
+
+        let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 70, height: 44))
+
+        let imageView = UIImageView(image: UIImage(named: "Avatar"))
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.frame = CGRect(x: 15, y: 0, width: 30, height: 30)
+        imageView.layer.cornerRadius = imageView.frame.width / 2
+        imageView.layer.borderWidth = 1
+        rightView.addSubview(imageView)
+
+        let locationLabel = UILabel(frame: CGRect(x: 0, y: 30, width: 60, height: 14))
+        locationLabel.text = "New York"
+        locationLabel.font = EFonts.monsterrat(size: 10)
+        locationLabel.textColor = .gray
+        locationLabel.textAlignment = .center
+        rightView.addSubview(locationLabel)
+
+        let rightBarButton = UIBarButtonItem(customView: rightView)
+        navigationItem.rightBarButtonItem = rightBarButton
+
     }
-    
+
+    @objc func leftButtonTapped() {
+        // Handle left button tap event
+    }
+
     func configureSearchController() {
         let searchController = UISearchController()
         //        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "What are you looking for?"
-        //        searchController.searchBar.searchBarStyle = .minimal
-        
+        searchController.searchBar.searchBarStyle = .minimal
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        
+        searchController.searchBar.tintColor = .black
+        
+        searchController.searchBar.searchTextField.leftView = nil
+        searchController.searchBar.searchTextField.rightViewMode = .always
+        searchController.searchBar.searchTextField.rightView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
+
+        if let textFieldInsideSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            let attributes = [NSAttributedString.Key.font: EFonts.monsterrat(size: 11)]
+             textFieldInsideSearchBar.attributedPlaceholder = NSAttributedString(string: "What are you looking for?", attributes: attributes)
+         }
+        searchController.searchBar.setCenteredPlaceHolder()
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -77,7 +120,6 @@ class HomeVC: UIViewController{
         return sectionHeader
     }
     
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section == 0 {
             return CGSize.zero
@@ -85,7 +127,6 @@ class HomeVC: UIViewController{
             return CGSize(width: collectionView.frame.width, height: 30)
         }
     }
-    
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
