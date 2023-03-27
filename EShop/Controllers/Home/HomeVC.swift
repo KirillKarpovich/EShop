@@ -69,7 +69,7 @@ class HomeVC: UIViewController{
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCVHeader.identifier, for: indexPath) as? HomeCVHeader
         else { return UICollectionReusableView() }
-        if indexPath.section == 1{
+        if indexPath.section == 1 {
             sectionHeader.title.text = "Latest"
         } else {
             sectionHeader.title.text = "Flash Sale"
@@ -87,7 +87,8 @@ class HomeVC: UIViewController{
     }
     
 }
-extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
            3

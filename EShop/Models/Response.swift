@@ -5,29 +5,78 @@
 //  Created by Kirill Karpovich on 16.03.23.
 //
 
-import Foundation
+import UIKit
 
-struct Response: Decodable {
-    let latest: [Products]?
-    let flashSale: [Products]?
+struct LatestResponse: Decodable {
+    let latest: [Latest]
 }
 
-struct Products: Decodable {
+struct FlashSaleResponse: Decodable {
+    let flashSale: [FlashSale]
+//
+//    enum CodingKeys: String, CodingKey {
+//            case flashSale = "flash_sale"
+//        }
+}
+
+struct FlashSale: Decodable {
     let category: String
     let name: String
     let price: Double
     let discount: Int?
     let imageUrl: String?
+//
+//    enum CodingKeys: String, CodingKey {
+//           case category, name, price, discount
+//           case imageUrl = "image_url"
+//       }
 }
 
-
-struct ProductDTO: Decodable {
+struct Latest: Decodable {
     let category: String
     let name: String
-    let price: Int
-    let discount: Int?
-    let imageUrl: URL?
+    let price: Double
+    let imageUrl: String?
+//    
+//    enum CodingKeys: String, CodingKey {
+//           case category, name, price
+//           case imageUrl = "image_url"
+//       }
 }
+
+//struct Response: Decodable {
+//    let latest: [Latest]
+//    let flash_sale: [flashSale]
+//
+//    enum CodingKeys: String, CodingKey {
+//         case latest = "latest"
+//         case flash_sale = "flash_sale"
+//     }
+//}
+//
+//struct flashSale: Decodable {
+//    let category: String
+//    let name: String
+//    let price: Double
+//    let discount: Int?
+//    let imageUrl: String?
+//}
+//
+//struct Latest: Decodable {
+//    let category: String
+//    let name: String
+//    let price: Double
+//    let imageUrl: String?
+//}
+//
+//
+//struct ProductDTO: Decodable {
+//    let category: String
+//    let name: String
+//    let price: Int
+//    let discount: Int?
+//    let imageUrl: URL?
+//}
 
 //struct ProductModel {
 //    let category: String

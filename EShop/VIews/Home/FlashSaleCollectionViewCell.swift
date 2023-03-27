@@ -14,7 +14,6 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemMint
         contentView.addSubview(flashCollectionVC.view)
         flashCollectionVC.view.fillSuperview()
     }

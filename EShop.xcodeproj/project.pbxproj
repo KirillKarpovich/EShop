@@ -52,6 +52,7 @@
 		68E2AFA229CB708700403541 /* ProfileCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA129CB708700403541 /* ProfileCategory.swift */; };
 		68E2AFA529CCB86200403541 /* ESButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA429CCB86200403541 /* ESButton.swift */; };
 		68E2AFA729CD881F00403541 /* ProfileTVHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA629CD881F00403541 /* ProfileTVHeader.swift */; };
+		68E2AFA929CF5C9200403541 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E2AFA829CF5C9200403541 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		68E2AFA129CB708700403541 /* ProfileCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCategory.swift; sourceTree = "<group>"; };
 		68E2AFA429CCB86200403541 /* ESButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESButton.swift; sourceTree = "<group>"; };
 		68E2AFA629CD881F00403541 /* ProfileTVHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVHeader.swift; sourceTree = "<group>"; };
+		68E2AFA829CF5C9200403541 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				68E2AF9C29C835CB00403541 /* NetworkManager.swift */,
+				68E2AFA829CF5C9200403541 /* DataProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				68E2AF7C29C35DDC00403541 /* ESTabBarCoordinator.swift in Sources */,
 				68E2AF6129C2F86100403541 /* FlashSaleCollectionVC.swift in Sources */,
 				68E2AF2E29C1E90700403541 /* ViewController.swift in Sources */,
+				68E2AFA929CF5C9200403541 /* DataProvider.swift in Sources */,
 				68E2AF9029C4CDBF00403541 /* ProfileTableCell.swift in Sources */,
 				68E2AF5D29C2F00A00403541 /* ProductCell.swift in Sources */,
 				68E2AFA729CD881F00403541 /* ProfileTVHeader.swift in Sources */,

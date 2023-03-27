@@ -11,7 +11,9 @@
         
         private let layout = UICollectionViewFlowLayout()
         
-        private var products = [Products]()
+        private var products = [FlashSale]()
+        
+        private var flashSaleData: FlashSaleResponse?
 
         override init(collectionViewLayout layout: UICollectionViewLayout) {
             super.init(collectionViewLayout: self.layout)
@@ -24,23 +26,38 @@
         override func viewDidLoad() {
             super.viewDidLoad()
             configure()
-            fetchFlashSale()
+//            fetchFlashSale()
+            loadData()
         }
         
-        private func fetchFlashSale() {
-            NetworkManager.shared.fetchFlashSale { [weak self] (response: Response?, error) in
-                if let error = error {
-                    print(error)
-                    return
-                }
-                if let products = response?.flashSale {
-                    self?.products = products
-                    DispatchQueue.main.async {
-                        self?.collectionView.reloadData()
-                    }
+        private func loadData() {
+            DataProvider.shared.fetchData { [weak self] result in
+                switch result {
+                case .success(let (flashSaleResponse, _)):
+                    self?.flashSaleData = flashSaleResponse
+                    self?.products = flashSaleResponse.flashSale
+                    self?.collectionView.reloadData()
+                
+                case .failure(let error):
+                    print("Failed to load data: \(error)")
                 }
             }
         }
+        
+//        private func fetchFlashSale() {
+//            NetworkManager.shared.fetchFlashSale { [weak self] (response: Response?, error) in
+//                if let error = error {
+//                    print(error)
+//                    return
+//                }
+//                if let products = response?.flashSale {
+//                    self?.products = products
+//                    DispatchQueue.main.async {
+//                        self?.collectionView.reloadData()
+//                    }
+//                }
+//            }
+//        }
         
         private func configure() {
             collectionView!.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)

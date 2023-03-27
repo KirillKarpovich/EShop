@@ -14,7 +14,6 @@ class LatestCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemMint
         contentView.addSubview(latestCollectionVC.view)
         latestCollectionVC.view.fillSuperview()
     }

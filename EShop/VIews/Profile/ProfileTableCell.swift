@@ -29,8 +29,8 @@ class ProfileTableCell: UITableViewCell {
         cellLabel.font = EFonts.monsterrat(size: 18)
         cellImageView.contentMode = .scaleAspectFit
         
-        disclosureImageView.anchor(top: topAnchor, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: contentView.frame.size.height/2, left: 0, bottom: contentView.frame.size.height/2, right: 20))
-        walletLabel.anchor(top: topAnchor, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: contentView.frame.size.height/2, left: 0, bottom: contentView.frame.size.height/2, right: 10))
+        disclosureImageView.anchor(top: topAnchor, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: contentView.frame.size.height/1.6, left: 0, bottom: contentView.frame.size.height/1.6, right: 20))
+        walletLabel.anchor(top: topAnchor, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: contentView.frame.size.height/2, left: 0, bottom: contentView.frame.size.height/2, right: 20))
         
         disclosureImageView.image = UIImage(named: "disclosureIndicator")
 

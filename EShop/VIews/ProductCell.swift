@@ -35,7 +35,7 @@ class ProductCell: UICollectionViewCell {
 //        avatarImageView.image = nil
 //    }
     
-    func setFlashSale(with product: Products) {
+    func setFlashSale(with product: FlashSale) {
         nameLabel.text = product.name
         categoryLabel.text = product.category
         discountLabel.text = String("\(product.discount!)% off")
@@ -43,7 +43,7 @@ class ProductCell: UICollectionViewCell {
         downloadImage(fromURL: product.imageUrl)
     }
     
-    func setLatest(with product: Products) {
+    func setLatest(with product: Latest) {
         nameLabel.text = product.name
         categoryLabel.text = product.category
         priceLabel.text = String("$ \(product.price)")
