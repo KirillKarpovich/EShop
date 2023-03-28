@@ -10,11 +10,8 @@ import UIKit
 class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let layout = UICollectionViewFlowLayout()
-    
     private var products = [Latest]()
-    
     private var latestData: LatestResponse?
-
 
     override init(collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: self.layout)
@@ -29,7 +26,6 @@ class LatestCollectionVC: UICollectionViewController, UICollectionViewDelegateFl
         configure()
         loadData()
     }
-    
     
     private func loadData() {
         DataProvider.shared.fetchData { [weak self] result in

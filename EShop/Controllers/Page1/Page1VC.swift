@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController{
+class Page1VC: UIViewController{
     
     private let coordinator: HomeFlow
     
@@ -22,7 +22,6 @@ class HomeVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Trade by Kirill"
         navControllerConfig()
         configureSearchController()
         configureCategoryCollectionView()
@@ -36,12 +35,27 @@ class HomeVC: UIViewController{
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
-        collectionView.register(LatestCollectionViewCell.self, forCellWithReuseIdentifier: LatestCollectionViewCell.identifier)
-        collectionView.register(FlashSaleCollectionViewCell.self, forCellWithReuseIdentifier: FlashSaleCollectionViewCell.identifier)
-        collectionView.register(HomeCVHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCVHeader.identifier)
+       
+        collectionView.register(
+            CategoryCollectionViewCell.self,
+            forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier
+        )
+        collectionView.register(
+            LatestCollectionViewCell.self,
+            forCellWithReuseIdentifier: LatestCollectionViewCell.identifier
+        )
+        collectionView.register(
+            FlashSaleCollectionViewCell.self,
+            forCellWithReuseIdentifier: FlashSaleCollectionViewCell.identifier
+        )
+        collectionView.register(
+            Page1CVHeader.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: Page1CVHeader.identifier
+        )
         
         collectionView.alwaysBounceVertical = true
         
@@ -51,7 +65,11 @@ class HomeVC: UIViewController{
 
     func navControllerConfig() {
         let titleLabel = UILabel()
-        titleLabel.text = "Trade by bata"
+        let attributedText = NSMutableAttributedString(string: "Trade by ")
+        let bataText = NSAttributedString(string: "bata", attributes: [.foregroundColor: UIColor.blue])
+        attributedText.append(bataText)
+
+        titleLabel.attributedText = attributedText
         titleLabel.font = EFonts.monsterratBold(size: 20)
         titleLabel.sizeToFit()
         navigationItem.titleView = titleLabel
@@ -81,7 +99,6 @@ class HomeVC: UIViewController{
 
         let rightBarButton = UIBarButtonItem(customView: rightView)
         navigationItem.rightBarButtonItem = rightBarButton
-
     }
 
     @objc func leftButtonTapped() {
@@ -90,7 +107,6 @@ class HomeVC: UIViewController{
 
     func configureSearchController() {
         let searchController = UISearchController()
-        //        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.searchBarStyle = .minimal
         navigationItem.searchController = searchController
@@ -110,7 +126,7 @@ class HomeVC: UIViewController{
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCVHeader.identifier, for: indexPath) as? HomeCVHeader
+        guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Page1CVHeader.identifier, for: indexPath) as? Page1CVHeader
         else { return UICollectionReusableView() }
         if indexPath.section == 1 {
             sectionHeader.title.text = "Latest"
@@ -129,7 +145,7 @@ class HomeVC: UIViewController{
     }
 }
 
-extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension Page1VC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
            3

@@ -27,7 +27,6 @@ class AuthButton: UIButton {
         configuration = .plain()
         configuration?.cornerStyle = .medium
         translatesAutoresizingMaskIntoConstraints = false
-
     }
     
     func set(title: String, imageName: String) {

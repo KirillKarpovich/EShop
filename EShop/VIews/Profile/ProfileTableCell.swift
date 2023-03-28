@@ -36,7 +36,5 @@ class ProfileTableCell: UITableViewCell {
 
         cellImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 20, bottom: 0, right: 0))
         cellLabel.anchor(top: topAnchor, leading: cellImageView.trailingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 10, bottom: 0, right: 0))
-        
-        
     }
 }

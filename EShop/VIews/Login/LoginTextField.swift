@@ -27,7 +27,7 @@ class LoginTextField: UITextField {
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 15
-        backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.9098039269, blue: 0.9098039269, alpha: 1)
+        backgroundColor = UIColor(hex: "#E8E8E8")
         autocorrectionType = .no
         textAlignment = .center
         clearButtonMode = .whileEditing
@@ -38,8 +38,12 @@ class LoginTextField: UITextField {
         let centeredParagraphStyle = NSMutableParagraphStyle()
         centeredParagraphStyle.alignment = .center
         
-        let font = UIFont(name: "Montserrat", size: 14) ?? UIFont.systemFont(ofSize: 17)
-        let attributes: [NSAttributedString.Key: Any] = [.font: font, .paragraphStyle: centeredParagraphStyle, NSAttributedString.Key.foregroundColor: UIColor.secondaryLabel]
+        let font = UIFont(name: "Montserrat", size: 14) ?? UIFont.systemFont(ofSize: 14)
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: font,
+            .paragraphStyle: centeredParagraphStyle,
+            NSAttributedString.Key.foregroundColor: UIColor.secondaryLabel
+        ]
         
         attributedPlaceholder = NSAttributedString(string: "Placeholder", attributes: attributes)
     }

@@ -22,13 +22,9 @@ class ProfileTVHeader: UITableViewHeaderFooterView, UIImagePickerControllerDeleg
     
     weak var delegate: ProfileTVHeaderDelegate?
 
-
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         configure()
-
-        uploadButton.addTarget(self, action: #selector(uploadButtonTapped), for: .touchUpInside)
-        changeFotoButton.addTarget(self, action: #selector(uploadButtonTapped), for: .touchUpInside)
     }
 
     required init?(coder: NSCoder) {
@@ -69,7 +65,18 @@ class ProfileTVHeader: UITableViewHeaderFooterView, UIImagePickerControllerDeleg
         uploadButton.centerXInSuperview()
         uploadButton.constrainHeight(constant: 40)
         uploadButton.anchor(top: nameLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 20, left: 30, bottom: 10, right: 30))
-
+        
+        uploadButton.addTarget(
+            self,
+            action: #selector(uploadButtonTapped),
+            for: .touchUpInside
+        )
+        
+        changeFotoButton.addTarget(
+            self,
+            action: #selector(uploadButtonTapped),
+            for: .touchUpInside
+        )
     }
 
     @objc private func uploadButtonTapped() {

@@ -30,7 +30,6 @@ extension UIColor {
                 return
             }
         }
-        
         fatalError("Invalid length of hex string \(hex). Expected length is 6")
     }
 }

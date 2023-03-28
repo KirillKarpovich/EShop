@@ -27,16 +27,12 @@ class ESButton: UIButton {
         configuration = .filled()
         layer.cornerRadius = 15
         layer.masksToBounds = true
-        
     }
     
     func set(title: String) {
-        
         configuration?.baseBackgroundColor = UIColor(hex: "#4E55D7")
         configuration?.baseForegroundColor = .white
         configuration?.title = title
         configuration?.attributedTitle?.font = EFonts.monsterratBold(size: 17)
-//        configuration?.imagePadding = 6
-//        configuration?.imagePlacement = .leading
     }
 }

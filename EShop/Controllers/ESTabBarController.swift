@@ -20,8 +20,6 @@ class ESTabBarController: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarConfiguration()
@@ -30,7 +28,6 @@ class ESTabBarController: UITabBarController {
         super.viewDidLayoutSubviews()
         self.changeHeight()
     }
- 
     
     func tabBarConfiguration() {
         let tabBarAppearance = UITabBar.appearance()

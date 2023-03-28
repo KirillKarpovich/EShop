@@ -20,7 +20,7 @@ class HomeCoordinator: Coordinator, HomeFlow {
     }
     
     func start() {
-        let vc = HomeVC(coordinator: self)
+        let vc = Page1VC(coordinator: self)
         navigationController.pushViewController(vc, animated: false)
     }
     

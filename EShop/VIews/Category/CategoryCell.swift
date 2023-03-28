@@ -28,7 +28,6 @@ class CategoryCell: UICollectionViewCell {
         label.text = category.title
     }
     
-    
     private func configure() {
         addSubviews(imageView, label)
         imageView.translatesAutoresizingMaskIntoConstraints = false

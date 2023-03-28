@@ -43,7 +43,6 @@ class ProfileVC: UITableViewController, UIImagePickerControllerDelegate & UINavi
         tableView.separatorStyle = .none
     }
     
-    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTVHeader.identifier) as? ProfileTVHeader else { return UIView() }
         header.delegate = self

@@ -1,37 +1,32 @@
 //
-//  SignInCoordinator.swift
+//  LoginCoordinator.swift
 //  EShop
 //
-//  Created by Kirill Karpovich on 16.03.23.
+//  Created by Kirill Karpovich on 28.03.23.
 //
 
 import UIKit
 
-protocol SignInFlow: AnyObject {
+protocol LoginFlow: AnyObject {
     func coordinateToTabBar()
-    func coordinateToLogIn()
 }
 
-class SignInCoordinator: Coordinator, SignInFlow {
+class LoginCoordinator: Coordinator, LoginFlow {
     
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+   
     func start() {
-        let vc = SignInVC(coordinator: self)
+        let vc = LogInVC(coordinator: self )
         navigationController.pushViewController(vc, animated: true)
     }
-    
+   
     func coordinateToTabBar() {
         let tabBarCoordinator = ESTabBarCoordinator(rootViewController: navigationController)
-        coordinate(to: tabBarCoordinator)
-    }
-    
-    func coordinateToLogIn() {
-        let loginCoordinator = LoginCoordinator(navigationController: navigationController)
-        coordinate(to: loginCoordinator)
+//        coordinate(to: tabBarCoordinator)
+        tabBarCoordinator.start()
     }
 }

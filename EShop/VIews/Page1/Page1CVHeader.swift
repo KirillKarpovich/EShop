@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeCVHeader: UICollectionReusableView {
-    static let identifier = String(describing: HomeCVHeader.self)
+class Page1CVHeader: UICollectionReusableView {
+    static let identifier = String(describing: Page1CVHeader.self)
         
     let title = UILabel()
     let viewButton = UIButton()
