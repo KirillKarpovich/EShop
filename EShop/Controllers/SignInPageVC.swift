@@ -68,6 +68,7 @@ class SignInVC: UIViewController {
         loginButton.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
         
         appleAuthButton.anchor(top: nil, leading: googleAuthButton.leadingAnchor, bottom: view.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 130, right: 20))
+        appleAuthButton.configuration?.imagePadding = 16
         
         googleAuthButton.centerXInSuperview()
         googleAuthButton.anchor(top: nil, leading: nil, bottom: appleAuthButton.topAnchor, trailing: nil, padding: .init(top: 0, left: 20, bottom: 20, right: 20))
